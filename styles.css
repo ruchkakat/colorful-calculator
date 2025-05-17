@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --buttons-bg-color: #FF8E71;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Nunito Sans, sans-serif;
+    font-weight: 600;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #E5E5E5;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--buttons-bg-color);
+}
+
+.calculator-grid > button:hover {
+    opacity: .75;
+}
