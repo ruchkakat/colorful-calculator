@@ -5,6 +5,7 @@
   --output-bg-color: #ffc2b3;
   --previous-num-color: #ff8e71;
   --current-num-color: #ff481a;
+  --logo-color: #FF8E71;
 }
 
 *,
@@ -47,17 +48,33 @@ body {
   grid-column: span 2;
 }
 
-.output {
+.output-wrapper {
   grid-column: 1 / -1;
   background-color: var(--output-bg-color);
+  padding: 30px;
+  min-height: 20vh;
+}
+
+.logo {
+    font-family: Fredoka, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--logo-color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.output {
   display: flex;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
-  padding: 30px;
   word-wrap: break-word;
   word-break: break-all;
-  min-height: 20vh;
+  min-height: 15vh;
 }
 
 .output .previous-operand {
@@ -88,9 +105,13 @@ body {
     height: 100%;
   }
 
-  .output {
+  .output-wrapper {
     min-height: 30vh;
     padding: 15px;
+  }
+
+  .output {
+    min-height: 25vh;
   }
 
   .output .previous-operand {
