@@ -55,6 +55,7 @@ body {
     padding: 30px;
     word-wrap: break-word;
     word-break: break-all;
+    min-height: 20vh;
 }
 
 .output .previous-operand {
