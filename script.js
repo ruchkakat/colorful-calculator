@@ -121,3 +121,66 @@ deleteButton.addEventListener("click", (button) => {
   calculator.delete();
   calculator.updateDisplay();
 });
+
+// Color Change
+
+const logo = document.querySelector('.logo');
+const root = document.documentElement;
+
+const colorSchemes = [
+    {
+        buttons: '#FF8E71',
+        output: '#FFC2B3',
+        previous: '#FF8E71',
+        current: '#FF481A',
+        logo: '#FF8E71'
+    },
+    {
+        buttons: '#92ECC5',
+        output: '#D4F7E8',
+        previous: '#92ECC5',
+        current: '#67E4AE',
+        logo: '#92ECC5'
+    },
+    {
+        buttons: '#F38181',
+        output: '#F8B9B9',
+        previous: '#F38181',
+        current: '#ED4545',
+        logo: '#F38181'
+    },
+    {
+        buttons: '#46B7B9',
+        output: '#C7E9EA',
+        previous: '#46B7B9',
+        current: '#46B7B9',
+        logo: '#46B7B9'
+    },
+    {
+        buttons: '#F5B461',
+        output: '#FADDB7',
+        previous: '#F5B461',
+        current: '#F19927',
+        logo: '#F5B461'
+    },
+    {
+        buttons: '#6EB6FF',
+        output: '#B3D8FF',
+        previous: '#6EB6FF',
+        current: '#4CA5FF',
+        logo: '#6EB6FF'
+    }
+];
+
+let currentScheme = 0;
+
+logo.addEventListener('click', () => {
+    currentScheme = (currentScheme + 1) % colorSchemes.length;
+    const scheme = colorSchemes[currentScheme];
+    
+    root.style.setProperty('--buttons-bg-color', scheme.buttons);
+    root.style.setProperty('--output-bg-color', scheme.output);
+    root.style.setProperty('--previous-num-color', scheme.previous);
+    root.style.setProperty('--current-num-color', scheme.current);
+    root.style.setProperty('--logo-color', scheme.logo);
+});
