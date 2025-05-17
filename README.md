@@ -26,3 +26,5 @@ A stylish and interactive calculator with playful color schemes. Click the **CAL
 
 ### 🌈 Spread Some Color in Your Math!
 
+*Life is like this calculator - sometimes you need to change your colors to see things clearly. Happy calculating! ✨*
+
